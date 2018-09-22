@@ -26,7 +26,7 @@ public class TelaChat extends javax.swing.JFrame {
 
     public void IniciarRMI() {
         try {
-            server = (IServidor) Naming.lookup("//localhost/ChatSrv");
+            server = (IServidor) Naming.lookup("//localhost/ServidorDoChat");
             cli = new Cliente(server);
             cli.setNome(JOptionPane.showInputDialog("Nome: "));
             server.contatoCliente(cli);
